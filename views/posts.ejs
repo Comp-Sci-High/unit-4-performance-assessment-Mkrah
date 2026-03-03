@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title><%= post.title %></title>
+    <link rel="stylesheet" href="/overview.css">
+</head>
+<body>
+<header class="navbar">
+    <h1>⚙️ Innovation Hub</h1>
+    <a href="/posts">Back to Posts</a>
+</header>
+
+<section class="post-full">
+    <img src="<%= post.imageURL %>"
+    style="width:100%; max-height:400px; object-fit:cover;">
+    <h2><%= post.title %></h2>
+    <p><strong>Category:</strong> <%= post.category %></p>
+    <p><strong>Author:</strong> <%= post.author %></p>
+    <p><%= post.content %></p>
+    <p>❤️ <%= post.likes %> Likes</p>
+</section>
+
+</body>
+</html>

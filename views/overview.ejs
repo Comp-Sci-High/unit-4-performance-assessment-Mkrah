@@ -1,0 +1,20 @@
+<section class="posts-container">
+    <% posts.forEach(post => { %>
+        <div class="post-card">
+            <img src="<%= post.imageURL %>" alt="<%= post.title %>">
+            <div class="post-content">
+                <h3><%= post.title %></h3>
+                <span class="category"><%= post.category %></span>
+                <p><%= post.description %></p>
+                <div class="post-meta">
+                    <span>By <%= post.author %></span>
+                    <span><%= post.datePosted %></span>
+                </div>
+                <div class="post-footer">
+                    <span>❤️ <%= post.likes %> Likes</span>
+                    <a href="/posts/<%= post.id %>" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</section>
